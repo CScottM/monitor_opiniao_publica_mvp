@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição
+build/
+dist/
+*.egg-info/
+
+# Ambientes virtuais
+venv/
+.env/
+.venv/
+env/
+ENV/
+*.env
+*.venv
+
+# Ferramentas de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de log e de cache
+*.log
+*.tmp
+*.bak
+.cache/
+*.sqlite3
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos ocultos de teste
+coverage.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Selenium ou WebDriver (se for salvar binários)
+chromedriver
+chromedriver.exe
