@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitor de Opinião Pública</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Monitor de Opinião Pública</h1>
+    <form method="post">
+        <input type="text" name="palavra_chave" placeholder="Digite a palavra-chave" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <hr>
+    <h2>Resultados:</h2>
+    <ul>
+    {% for texto, link, data_coletada, sentimento in resultados %}
+        <li>
+            <a href="{{ link }}" target="_blank">{{ texto }}</a><br>
+            Data: {{ data_coletada }} | Sentimento: {{ sentimento }}
+        </li>
+    {% else %}
+        <li>Nenhum resultado encontrado.</li>
+    {% endfor %}
+</ul>
+</body>
+<!-- Adicione logo após o <body> -->
+{% if erro %}
+    <div style="color: red; font-weight: bold;">{{ erro }}</div>
+{% endif %}
+</html>
